@@ -8,7 +8,7 @@ class Pet {
         this.ownerid = ownerid;
     }
     static getownerbyid(petobject, owners) {
-        let foundOwner;
+       /* let foundOwner;
         for(let i =0; i<owners.length ; i++)
         {
             
@@ -19,7 +19,15 @@ class Pet {
                 break;
             }
             
-        }
+        }*/
+        // Function 
+        function findowner(owner) {
+            return owner.id == petobject.ownerid ;
+            }
+        let foundOwner = owners.find(findowner);
+       // let foundOwner = owners.find( function (owner){
+       //     return owner.id == petobject.ownerid ;
+       // });
         if(!foundOwner)
         {
             return "Error : OWNER NOT FOUND";
@@ -45,7 +53,7 @@ class Owner {
 
 let mypet = new Pet("rex",12,"10");
 let arryofowner =[
-    new Owner("essa" , "aboasali", "10"),
+    new Owner("essa" , "aboasali","10"),
     new Owner("dan","welson","14"),
     new Owner("lucke","parker","12")
 ];
