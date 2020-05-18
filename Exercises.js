@@ -22,7 +22,7 @@ class Pet {
         }*/
         // Function 
         function findowner(owner) {
-            return owner.id == petobject.ownerid ;
+            return owner.Id == petobject.ownerid ;
             }
         let foundOwner = owners.find(findowner);
        // let foundOwner = owners.find( function (owner){
